@@ -26,8 +26,8 @@ $(document).on("click", function(e){
   }
 })
 function addTrigger() {
-  $(".tweet-content").each(function(){
-    if ($(this).find('.emojitwitter').length < 1) $(this).append('<div class="emojitwitter"><div class="icon_trigger">\ud83d\ude04</div><div class="icons"></div></div>');
+  $(".tweet-box").each(function(){
+    if ($(this).parent('div.tweet-content').find('.emojitwitter').length < 1) $(this).parent('div.tweet-content').append('<div class="emojitwitter"><div class="icon_trigger">\ud83d\ude04</div><div class="icons"></div></div>');
   });
 }
 var observer = new MutationObserver(addTrigger);
